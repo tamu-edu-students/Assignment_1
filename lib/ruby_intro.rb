@@ -23,7 +23,24 @@ def max_2_sum(arr)
 end
 
 def sum_to_n?(arr, number)
-  # YOUR CODE HERE
+  # Create a hash to store the elements we've seen so far
+  seen_elements = {}
+
+  arr.each do |element|
+    # Calculate the difference between the target number and the current element
+    difference = number - element
+
+    # If the difference exists in the hash, we found two elements that sum up to 'number'
+    if seen_elements.key?(difference)
+      return true
+    end
+
+    # Otherwise, add the current element to the hash
+    seen_elements[element] = true
+  end
+
+  # If we didn't find a pair of elements that sum to 'number', return false
+  return false
 end
 
 # Part 2
