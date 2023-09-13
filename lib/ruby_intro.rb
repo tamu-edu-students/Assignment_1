@@ -77,6 +77,9 @@ end
 class BookInStock
   # Constructor
   def initialize(isbn, price)
+    if isbn.empty? || price <= 0
+      raise ArgumentError, "ISBN cannot be empty and price must be greater than zero."
+    end
     @isbn = isbn
     @price = price
   end
