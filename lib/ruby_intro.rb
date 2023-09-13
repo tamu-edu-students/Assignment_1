@@ -50,7 +50,14 @@ def hello(name)
 end
 
 def starts_with_consonant?(string)
-  # YOUR CODE HERE
+  # Check if the string is empty or does not start with a letter
+  return false if string.empty? || !string.match?(/\A[a-zA-Z]/)
+
+  # Convert the first character of the string to lowercase and check if it's a consonant
+  first_char = string[0].downcase
+  consonants = 'bcdfghjklmnpqrstvwxyz'
+
+  return consonants.include?(first_char)
 end
 
 def binary_multiple_of_4?(string)
