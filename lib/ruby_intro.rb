@@ -61,7 +61,14 @@ def starts_with_consonant?(string)
 end
 
 def binary_multiple_of_4?(string)
-  # YOUR CODE HERE
+  # Check if the string is empty or contains any non-binary characters
+  return false unless string.match?(/\A[01]+\z/)
+
+  # Convert the binary string to an integer
+  binary_number = string.to_i(2)
+
+  # Check if the integer is a multiple of 4
+  return binary_number % 4 == 0
 end
 
 # Part 3
