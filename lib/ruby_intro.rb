@@ -11,7 +11,15 @@ def sum(arr)
 end
 
 def max_2_sum(arr)
-  # YOUR CODE HERE
+  if arr.empty?
+    return 0
+  elsif arr.length == 1
+    return arr[0]
+  else
+    # Sort the array in descending order and take the first two elements
+    sorted_arr = arr.sort.reverse
+    return sorted_arr[0] + sorted_arr[1]
+  end
 end
 
 def sum_to_n?(arr, number)
