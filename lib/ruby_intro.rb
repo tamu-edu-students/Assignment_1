@@ -75,5 +75,29 @@ end
 
 # Object representing a book
 class BookInStock
-  # YOUR CODE HERE
+  # Constructor
+  def initialize(isbn, price)
+    @isbn = isbn
+    @price = price
+  end
+
+  # Getter method for ISBN
+  def isbn
+    @isbn
+  end
+
+  # Setter method for ISBN
+  def isbn=(new_isbn)
+    @isbn = new_isbn
+  end
+
+  # Getter method for price
+  def price
+    @price
+  end
+
+  # Setter method for price
+  def price=(new_price)
+    @price = new_price
+  end
 end
